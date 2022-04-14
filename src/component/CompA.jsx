@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 
 const CompA = () => {
   // https://jsonplaceholder.typicode.com/posts
-  const [id, setId] = useState(0);
+  const [id, setId] = useState(1);
   const [post, setPost] = useState({});
 
   useEffect(() => {
@@ -18,12 +18,16 @@ const CompA = () => {
   });
 
   return (
-    <div className="">
-      <input type="number" onChange={(e) => setId(e.target.value)} />
+    <div>
+      <input
+        className="form-control w-25"
+        type="number"
+        onChange={(e) => setId(e.target.value)}
+      />
 
-      <ul>
+      <ul className="list-unstyled">
         <li>
-          {post.id} - {post.title}
+          {post.id ? `${post.id}-` : ""} {post.title}
         </li>
       </ul>
     </div>
