@@ -1,18 +1,13 @@
 import React, { Component } from "react";
-import TestComp from "./component/TestComp";
-import TestHComp from "./component/TestHComp";
+
 import "./App.css";
+import CompA from "./component/CompA";
 
 export class App extends Component {
-  state = {};
-  componentDidMount() {
-    console.log("hello");
-  }
   render() {
     return (
       <div>
-        <TestComp />
-        <TestHComp />
+        <CompA />
       </div>
     );
   }
