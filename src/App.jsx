@@ -1,13 +1,15 @@
 import React, { Component } from "react";
 
 import "./App.css";
-import CompA from "./component/CompA";
+import Sidebar from "./component/Sidebar";
+import Widget from "./component/Widget";
 
 export class App extends Component {
   render() {
     return (
       <div>
-        <CompA />
+        <Sidebar />
+        <Widget />
       </div>
     );
   }
